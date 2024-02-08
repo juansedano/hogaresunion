@@ -1,0 +1,81 @@
+/*v=0.0.8 22:00 26/September/2021*/
+#sourceOption {
+    height:40px !important;
+    border-radius:4px;
+    height: 34px !important;
+}
+
+#searchOption {
+    height:40px !important;
+    border-radius:4px;
+    height: 34px !important;
+}
+
+#searchInput {
+    width:280px;
+    border-radius:4px
+}
+
+#searchState {
+    height:40px !important;
+    border-radius:4px;
+    height: 34px !important;
+}
+
+#affiliatesTable>tbody>tr>td {
+    padding:4px !important;
+}
+
+#searchGo {
+    background-color:#FFB71B;
+    color:#FFFFFF;
+    height:34px;
+    border-radius:4px;
+    padding:4px 8px !important;
+}
+
+#affiliatesResultSize {
+    display: block; 
+    text-align: left;
+    padding-bottom:4px;
+}
+
+#affiliatesInfo {
+    text-align:center;
+    padding-bottom:4px
+}
+
+#affiliatesTable {
+    font-size:12px;
+    margin-bottom:0px;
+}
+
+#affiliatesResultPages {
+    display:none;
+    text-align:right;
+    padding-top:4px;
+    line-height:34px
+}
+
+.pasivePagination {
+    padding:8px 12px;
+    color: #95999e;
+}
+
+.dotsPagination {
+    padding:8px 10px;
+    color: #95999e;
+}
+
+.activePagination {
+    padding:8px 12px;
+    color: #95999e;
+    /*background-color: #95999e;*/
+    border: 1px solid #c8cacc;
+    /*border-radius: 50%;*/
+}
+
+.pasivePaginationArrow {
+    padding:8px 12px;
+    color: #e5e5e5;
+} 

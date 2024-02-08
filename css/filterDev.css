@@ -1,0 +1,185 @@
+.td-span-arrow, .div-content-td-span-arrow, #lbl-tyim-selected {
+    cursor: pointer;
+    height: 26px;
+} 
+.content-filters-td{
+    display: none;
+    position: absolute;
+    max-height: 230px;
+    width: 90%;
+    border: 1px solid #d9d9d9;
+    margin: 0px -17px 0 -12px;
+    border-radius: 0 0 5px 5px;
+    background-color: #FFF;
+    overflow: auto;
+    padding: 10px;
+    text-align: left;
+}
+.content-filters-td div{
+    padding-left: 15%;
+}
+.td-span-arrow:before{ /* Flechita*/
+    position: static;
+    top: 50%;
+    font-weight: 400;
+    margin-top: 0px;
+    right: 0;
+    height: 20px;
+    line-height: 20px;
+    content: "\25BE";
+    font-family: "Material Design Icons";
+    font-size: 20px;
+    float: right;
+}
+.td-span-arrow-rotated:before{
+    /* Rotate div */
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+.select2-container-multi .select2-choices .select2-search-field input{
+    height: 20px;
+}
+.input-sm-filterdev{
+    height: 26px!important;
+    padding: 5px 10px;
+    text-align-last: center;
+}
+.buttonDev{
+    margin: 4px;
+    font-size: 12px;
+    height: 24px;
+    padding: 0px 4px;
+    background-color: #FFB71B;
+    color: #FFF;
+    width: 100%;
+}
+.buttonDev:hover{
+    color: #FFF;
+}
+.spaceUp{
+    padding-top: 10px;
+    width: 100%;
+}
+.buttonSend{ 
+    background-color: #5bb95c;
+}
+.buttonOpen{ 
+    background-color: #407197;
+}
+.buttonSend:hover{ 
+    background-color: #5bb95c;
+}
+#filterRes{
+    display: none;
+}
+#developmentList{
+    text-align: start;
+}
+.spaceRigth{
+    padding-right: 0;
+}
+.btn-closeframe{
+    position: absolute;
+    right: 5px; 
+}
+
+#fileData {
+    display: none;
+    text-align: center;
+    padding: 8px;
+    background-color:#f5f8fa;
+}
+#fielContactName{
+    width: 100%;;
+}
+.btn-cancel {
+    background-color: #d9534f;
+}
+.btn-ok {
+    background-color: #5bb95c;
+}
+.btn-appo{
+    width:90px;
+    font-size:12px;
+    height:18px;
+    padding:0px 4px;
+    background-color:#FFB71B;
+    color:#FFFFFF;
+    margin-top:-4px;
+}
+.offer{
+    /* font-weight: bold; */
+    padding: 8px 0px;
+}
+#fileContactUpload {
+    background-color:#f5f8fa;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.fileContactForm {
+    background-color: rgb(238, 238, 238);
+    padding: 8px;
+    margin: 0;
+    width: 100% !important;
+    height: auto;
+    border: 2px dashed #ccc;
+    min-height: 80px;
+}
+.fileContactForm input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 85% !important;
+    height: 80px;
+    outline: none;
+    opacity: 0;
+}
+.deleteFile {
+    color: #d9534f;
+}
+.deleteFile:hover {
+    color: #9b5350;
+}
+
+@media (min-width: 1410px) {
+    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+        float: left;
+    }
+    .col-xl-12 {
+        width: 100%;
+    }
+    .col-xl-11 {
+        width: 91.66666667%;
+    }
+    .col-xl-10 {
+        width: 83.33333333%;
+    }
+    .col-xl-9 {
+        width: 75%;
+    }
+    .col-xl-8 {
+        width: 66.66666667%;
+    }
+    .col-xl-7 {
+        width: 58.33333333%;
+    }
+    .col-xl-6 {
+        width: 50%;
+    }
+    .col-xl-5 {
+        width: 41.66666667%;
+    }
+    .col-xl-4 {
+        width: 33.33333333%;
+    }
+    .col-xl-3 {
+        width: 25%;
+    }
+    .col-xl-2 {
+        width: 16.66666667%;
+    }
+    .col-xl-1 {
+        width: 8.33333333%;
+    }
+}

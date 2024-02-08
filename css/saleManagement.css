@@ -1,0 +1,140 @@
+.data {
+    padding-left: 6px;
+}
+.fieldData {
+    margin: 0 0 2px;
+}
+.width50p {
+    width: 49%;
+}
+.width100p {
+    width: 99%;
+}
+.spaceRow{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.inputData {
+    border: 0;
+    outline: 0;
+    border-color: gray;
+    /* border-bottom: 3px solid cornflowerblue; */
+}
+.inputData:focus {
+    border-bottom: 1px solid;
+}
+.inputData:hover {
+    border-bottom: 1px solid;
+}
+.myBtn {
+    font-size: 10px;
+    height: 18px;
+    line-height: normal;
+    padding: 1px 10px;
+    position: absolute;
+    right: 15%;
+}
+.saleResult {
+    height: 18px;
+    line-height: normal;
+    padding: 1px 10px;
+}
+.actionBtn {
+    font-size: 10px;
+    height: 18px;
+    line-height: normal;
+    padding: 1px 10px;
+}
+.spaceBottom{
+    padding-bottom: 5px;
+}
+.inactive-panel {
+    padding: 0px;
+    text-align: center;
+    top: 0px;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+}
+.labelSpace{
+    margin-top: 40px;
+}
+.saleSection{
+    border: 1px solid rgb(149 153 158);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.downloadInvoice{
+    cursor: pointer;
+}
+div#commentsContainer {
+    background-color: #e5ddd5;
+    /* background-image: url(images/fondowaligth.png); */
+    background-attachment: fixed;
+    background-size: 24%;
+}
+.comment {
+    word-wrap: break-word;
+    padding:8px;
+    border:1px solid #fff;
+    margin:8px 0px;
+    border-radius:8px;
+    background-color:#fff;
+}
+#imageUploadContainer {
+    padding: 0px;
+    text-align: center;
+    bottom: 0px;
+    z-index: 10;
+    background-color: #f5f8fa;
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    display: none;
+    left: 0px;
+}
+.formUpload {
+    background-color: #fff;
+    padding: 8px;
+    margin:0;
+    width: 100% !important;
+    height: 100%;
+    border: 2px dashed #ccc;
+}
+.formUpload p{
+    padding: 0;
+    width: 100%;
+    min-height: 250px;
+    text-align: center;
+    /*line-height: 292px;*/
+    color: #cccccc;
+    font-family: Arial;
+}
+.formUpload input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    /*height: 292px;*/
+    outline: none;
+    opacity: 0;
+}
+#imgInput {
+    width: 95% !important;
+    cursor:pointer;
+}
+div#images img {
+    max-width: 100%;
+    display: inline-block;
+}
+#images {
+    padding: 0;
+    width: 100%;
+}
+.comment-image {
+    width: 100%;
+    height: auto;
+}

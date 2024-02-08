@@ -1,0 +1,111 @@
+<div class="contentpanel" style="margin-top:-16px;">                      
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Nombre del desarrollo:</strong></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="manager_name" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" />
+                    </div>
+                </div><!-- form-group -->        
+                <div class="form-group">
+                    <label class="col-sm-4" style="text-align: right"><strong>Descripción comercial del desarrollo</strong> (texto que desea aparezca en la descriptiva inicial):</label>
+                    <div class="col-sm-8">
+                        <input type="text" id="manager_lastname" class="form-control" style="height: 40px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" />
+                    </div>
+                </div><!-- form-group -->  
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Slogan para promover el desarrollo:</strong></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="manager_position" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" />
+                    </div>
+                </div><!-- form-group --> 
+            </form>
+        </div> 
+    </div>  
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal"> 
+                <div class="form-group">
+                    <label class="col-sm-12"><strong>¿Dónde está ubicado el desarrollo?</strong> (punto al que debe llegar el prospecto).</label>
+                </div>
+            </form>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-horizontal">                 
+                <div class="form-group">
+                    <label class="col-sm-7" style="text-align: right"><strong>Latitud</strong> (p. Ej. CDMX = 19.49780):</label>
+                    <div class="col-sm-5">
+                        <input type="text" id="mapinfo_latitude" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;"  /> <!--value="19.404327"-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-7" style="text-align: right"><strong>Longitud</strong> (p. Ej. CDMX = -99.12690):</label>
+                    <div class="col-sm-5">
+                        <input type="text" id="mapinfo_longitude" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;"   /> <!--value="-99.2436997"-->
+                    </div>
+                </div><!-- form-group -->          
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Calle:</strong></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="mapinfo_street" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" />
+                    </div>
+                </div><!-- form-group --> 
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Número exterior:</strong></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="mapinfo_num" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" />
+                    </div>
+                </div><!-- form-group -->  
+                <div class="form-group">
+                        <label class="col-sm-4 text-bold" style="text-align: right"><strong>Código Postal:</strong></label>
+                        <div class="col-sm-4">
+                            <input type="text" id="mapinfo_postalcode" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" />
+                        </div>
+                        <div class="col-sm-4">
+                                <button type="button" class="btn btn-success" id="get_map_cords" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" disabled>Localizar en el mapa</button>
+                        </div>
+                    </div><!-- form-group -->  
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Colonia:</strong></label>
+                    <div class="col-sm-8" id="mapinfo_neighborhood_container">
+                        <select id="mapinfo_neighborhood" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;width:100%;" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div><!-- form-group --> 
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Municipio:</strong></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="mapinfo_city" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" disabled/>
+                    </div>
+                </div><!-- form-group --> 
+                <div class="form-group">
+                    <label class="col-sm-4 text-bold" style="text-align: right"><strong>Estado:</strong></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="mapinfo_state" class="form-control" style="height: 22px; padding: 2px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px;" disabled/>
+                    </div>
+                </div><!-- form-group -->
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div id="developmentMap" style="background-image: url(images/googlemap.jpg); width: 100%; height: 290px;background-color: #cccccc"><!--<button type="button" id="showMap">Show Map</a>--></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal">    
+                <div class="form-group">
+                    <div class="col-sm-12" style="margin-top:12px;text-align: center">
+                        <button type="button" class="btn btn-success" id="development_attributes_form">Atributos del Desarrollo</button>
+                        <button type="button" class="btn btn-success" id="development_images_form">Fotos del Desarrollo</button>
+                        <button type="button" class="btn btn-primary" id="validate_manager_info">Registrar</button>
+                        <button type="reset" class="btn btn-default" id="modal_development_close">Cancelar</button>
+                    </div>
+                </div><!-- form-group -->  
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,243 @@
+/*v=1.0.0 22:00 14/September/2022*/
+input[type=file]::-webkit-file-upload-button {
+    width: 1px;
+    height: 1px;
+}
+
+.whatsapp-icon {
+    padding-left: 12px !important;
+    padding-top: 3px !important;
+    background-color: #31b645 !important;
+}
+
+#templateBody {
+    margin: 0px;
+    font-size:12px;
+}
+
+.form-upload {
+    background-color: #fff;
+    padding: 0px;
+    margin:0;
+    width: 100% !important;
+    border: 1px solid #d1d1d1;
+    border-color: #cccccc;
+}  
+.form-upload p {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    color: #cccccc;
+    font-family: Arial;
+}
+.form-upload input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    outline: none;
+    opacity: 0;
+} 
+
+.form-upload-contacts {
+    border-color: #cccccc;
+    height: 35px;
+} 
+
+.form-upload-image {
+    border-color: #cccccc;
+    height: 28px;
+} 
+
+#fileInputDoc {
+    height: 35px; 
+    width: 94% !important; 
+}
+
+#fileInputImg {
+    height: 28px; 
+    width: 90% !important; 
+}
+
+.upload-contacts-div {
+    width:100% !important;
+    text-align:center;
+    padding:8px;
+}
+
+.upload-image-div {
+    width:100% !important;
+    text-align:center;
+    padding:4px;
+}
+
+#fileInputSaveImg {
+    color: #cccccc;
+    border-radius:0px !important;
+    width:100%;
+    border: 1px solid #cccccc;
+    margin-top:8px !important;
+    height:28px;
+    padding: 3px 4px;
+}
+
+#fileInputCancelImg {
+    color: #cccccc;
+    border-radius:0px !important;
+    width:100%;
+    border: 1px solid #cccccc;
+    margin-top:8px !important;
+    height:28px;
+    padding: 3x 4px;
+}
+
+#fileInputSaveImg.disabled, #fileInputSaveImg[disabled],
+#fileInputCancelImg.disabled, #fileInputCancelImg[disabled] {
+    opacity: 1 !important;
+}
+
+#headerImg {
+    position: relative;
+}
+
+.fileInputLoaderImg {
+    background: url('../images/loading.gif') no-repeat 0 0;
+    background-size: 40px 40px;
+    background-position:center;    
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: absolute;
+    background-color: #fff;
+    opacity: .5;
+  }
+
+  #contactData {
+    width: 100%;
+    overflow-x:auto;
+    overflow-y:auto;
+    /*max-height:514px;*/
+    border: 1px solid #cccccc;
+    min-height:34px;
+    text-align:center;
+    padding-top:8px;
+  }
+
+ .contact-btn-action {
+    line-height: 16px !important;
+    color:#ffffff !important;
+    padding:2px 4px 2px 4px !important;
+    cursor:pointer !important;
+}
+
+.edit-contact-btn {
+    background-color:#ffb71b;
+    margin-right:4px;
+}
+
+.del-contact-btn {
+    background-color:#ff0000;
+}
+
+.restore-contact-btn {
+    background-color:#31b645;
+    padding-top: 2px;
+}
+
+.restore-contact-btn i {
+    padding:1px 1px 1px 1px;
+    font-size:11px;
+}
+
+#campaignDate {
+    z-index: 1600 !important; /* has to be larger than 1050 */
+} 
+
+.input-group-addon {
+    height: 35px !important;
+    padding:2px 4px;
+    background-color:#cccccc;
+}
+
+.input-group-addon i {
+    color: #ffffff;
+    font-size:11px;
+}
+
+#campaignDate {
+    border: 1px solid #cccccc;
+    font-size:12px;
+    background-color: #ffffff;
+    cursor: default;
+    margin: 0px !important;
+    height: 35px !important;
+    color: #cccccc;
+    padding: 4px 4px !important;
+}
+
+#campaignTime {
+    border: 1px solid #cccccc;
+    font-size:12px;
+    background-color: #fff;
+    cursor: default;
+    margin: 0px !important;
+    height: 35px !important;
+    color: #cccccc;
+    padding: 4px 4px !important;
+}
+
+.campaignDateTimeEnable {
+    border: 1px solid #31b645 !important;
+    color: #636E7B !important;
+    cursor: pointer;
+}
+
+#scheduleCampaignButton {
+    height: 35px !important;
+    font-size:13px;
+    width:100%;
+    background-color: #cccccc;
+    color: #ffffff;
+}
+
+.select2-chosen {
+    color: #444444 !important;
+}
+
+.bg-image-cotainer {
+    background: url('../images/no-image.png') no-repeat 0 0;
+    background-size: cover;
+    text-align: center;
+    padding-top: 58px;
+    width:100%;
+    height:128px;
+    font-size:13px;
+    font-weight: bold;
+  }
+
+  .validRecord, .invalidRecord, .deletedRecord {
+    display: table-row;
+  }
+
+  #showAllRecords, #showInvalidRecords, #showDeletedRecords, #showValidRecords {
+    text-decoration: none;
+    color: #31708f;
+  }
+
+  #campaignName::placeholder { 
+    color: #cccccc;
+    opacity: 1; 
+  }
+
+  #campaignName {
+    height: 35px !important;
+    font-size:13px;
+    width:100%;
+    background-color: #ffffff;
+    color: #cccccc;
+    cursor: default;
+  }
+
+  th, td {
+    padding: 4px !important;
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GEOIP DB - jQuery example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>Country: <span id="country"></span>
+    <div>State: <span id="state"></span>
+    <div>City: <span id="city"></span>
+    <div>Latitude: <span id="latitude"></span>
+    <div>Longitude: <span id="longitude"></span>
+    <div>Postal Code: <span id="ip"></span>
+    <script>
+        $.ajax({
+            url: "https://geoip-db.com/jsonp?latitude=19.4785&longitud=-100.2396",
+            jsonpCallback: "callback",
+            dataType: "jsonp",
+            success: function( location ) {
+                $('#country').html(location.country_name);
+                $('#state').html(location.state);
+                $('#city').html(location.city);
+                $('#latitude').html(location.latitude);
+                $('#longitude').html(location.longitude);
+                $('#ip').html(location.postal);  
+            }
+        });     
+    </script>
+</body>
+<script>
+$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyB8uu1scfFc1dFZ7H77r3ZqZzlifH7yNcc',{
+        sensor: false,
+        latlng: "19.404327,-99.2436997" //Smarto
+        //latlng: "18.9167669,-99.2436102"
+    }, 
+    function(data, textStatus) {
+        console.log(data);
+        console.log('Street: ' + data.results[0]['address_components'][1]['long_name']); 
+        console.log('Neighborhood: ' + data.results[0]['address_components'][2]['long_name']); 
+        console.log('Location: ' + data.results[0]['address_components'][3]['long_name']);
+        console.log('City: ' + data.results[5]['address_components'][0]['long_name']);
+        console.log('Country: ' + data.results[0]['address_components'][5]['long_name']);
+        console.log('Postal Code: ' + data.results[0]['address_components'][6]['long_name']);
+    }
+ );
+</script>
+</html>
