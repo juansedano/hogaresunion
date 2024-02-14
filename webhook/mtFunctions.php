@@ -195,10 +195,9 @@ function saveMessage($message) {
         $db->commit();
         $db = null;
 
-        if ($newContactFlag) {
-            $autoresponse = "Gracias por contactar a Hogares Unión".chr(10).chr(10)."Cómo podemos apoyarte el día de hoy?";
-            $fileUrl = "https://storage.googleapis.com/tratodirecto.com/hogares-union/94144autoresponseImage.jpg";
-            $data = array("phoneId" => $instance, "phone" => $phone, "type" => 'media', "message" => $autoresponse, "media" => $fileUrl);
+        if ($newContactFlag && !strpos($phone, '@g.us')) {
+            $apiComplements = getAPIComplements($instance);
+            $data = array("phoneId" => $instance, "phone" => $phone, "type" => 'media', "message" => $apiComplements['message'], "media" => $apiComplements['image']);
             $result = sendMessageMT($data);
             if ($result['status'] == 'success') {
                 $logData = array(
@@ -207,8 +206,8 @@ function saveMessage($message) {
                     "phone" => $phone, 
                     "type" => 'image', 
                     "providerId" => $result['id'],
-                    "fileURL" => $fileUrl,
-                    "caption" => $autoresponse,
+                    "fileURL" => $apiComplements['image'],
+                    "caption" => $apiComplements['message'],
                     "internal" => 0
                 );
                 $result = addMsg2Log($logData, 5);
@@ -386,11 +385,11 @@ function send2Storage($path) {
     } else {
         $fileType = pathinfo('./files/'.$file_name, PATHINFO_EXTENSION);
         $fileName = time() . '.' . $fileType;
-        $uploadResult = upload_object('tratodirecto.com', 'messaging/'.$fileName, './files/'.$file_name, true); 
+        $uploadResult = upload_object('tratodirecto.com', 'hogares-union/'.$fileName, './files/'.$file_name, true); 
         if ($uploadResult) {
-            $msgFileName = 'https://storage.googleapis.com/tratodirecto.com/messaging/'.$fileName;
+            $msgFileName = 'https://storage.googleapis.com/tratodirecto.com/hogares-union/'.$fileName; 
         } else {
-            $msgFileName = 'https://wmessaging.com/tratodirecto/desarrolladores/webhook/files/'.$file_name;
+            $msgFileName = 'https://hogaresunion.tratodirecto.com/uploadedFiles/'.$fileName;
         }
     }
     return $msgFileName;
@@ -1088,6 +1087,22 @@ function activeMessagesFlag($contactId) {
         $db->commit();
         $db = null;
 		return $result;
+	} catch (PDOException $e) {
+		print "Error!: " . $e->getMessage() . "<br/>";
+	}
+}
+
+function getAPIComplements($instance) {
+	include ("../bat/DBconection.php");
+	try {
+        $db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8, time_zone = "'.$timezonediff.'"'));
+		$string = "Select c.Image as 'image', c.Message as 'message' from tratodirecto_hu.API_Complements c, API a where a.Id = c.API_Id and a.Instance = :instance;";
+		$sql = $db->prepare($string);
+		$sql->bindParam(':instance',$instance);
+		$sql->execute();
+		$row = $sql->fetch();
+		$db = null;
+        return $row;
 	} catch (PDOException $e) {
 		print "Error!: " . $e->getMessage() . "<br/>";
 	}
