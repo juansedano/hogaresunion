@@ -195,7 +195,7 @@ function saveMessage($message) {
         $db->commit();
         $db = null;
 
-        if ($newContactFlag && !strpos($phone, '@g.us')) {
+        if ($newContactFlag && !strpos($phone, '@g.us') && $msgType == 8) {
             $apiComplements = getAPIComplements($instance);
             $data = array("phoneId" => $instance, "phone" => $phone, "type" => 'media', "message" => $apiComplements['message'], "media" => $apiComplements['image']);
             $result = sendMessageMT($data);
