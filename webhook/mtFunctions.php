@@ -1097,7 +1097,7 @@ function getAPIComplements($instance) {
 	include ("../bat/DBconection.php");
 	try {
         $db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8, time_zone = "'.$timezonediff.'"'));
-		$string = "Select c.Image as 'image', c.Message as 'message' from tratodirecto_hu.API_Complements c, API a where a.Id = c.API_Id and a.Instance = :instance;";
+		$string = "Select c.Image as 'image', c.MessageOut as 'message' from tratodirecto_hu.API_Complements c, API a where a.Id = c.API_Id and a.Instance = :instance;";
 		$sql = $db->prepare($string);
 		$sql->bindParam(':instance',$instance);
 		$sql->execute();
