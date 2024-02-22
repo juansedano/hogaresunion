@@ -197,6 +197,7 @@ function saveMessage($message) {
 
         if ($newContactFlag && !strpos($phone, '@g.us') && $msgType == 8) {
             $apiComplements = getAPIComplements($instance);
+            sleep(5);
             $data = array("phoneId" => $instance, "phone" => $phone, "type" => 'media', "message" => $apiComplements['message'], "media" => $apiComplements['image']);
             $result = sendMessageMT($data);
             if ($result['status'] == 'success') {
