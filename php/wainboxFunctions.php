@@ -49,7 +49,7 @@ function activeMessagesFlag($contactId) {
 	try {
 		$db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8, time_zone = "'.$timezonediff.'"', PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		$db->beginTransaction();
-		$string = "Update tratodirecto_hu.Contact set WaFlag_Id = 1 where Id = :contactId";
+		$string = "Update tratodirecto_hu.Contact set UtcModifiedAt = unix_timestamp(), WaFlag_Id = 1 where Id = :contactId";
 		$sql = $db->prepare($string);
         $sql->bindParam(':contactId', $contactId);
 		if ($sql->execute()) {
@@ -865,7 +865,7 @@ function addRemoveFavorite($activeMessagesContactId, $activeMessagesInstance, $a
 		$db->beginTransaction();      
 
         $favorite = $activeMessagesIsFavorite == '1' ? 0 : 1; 
-		$string = "Update tratodirecto_hu.Contact set Favorite = :isFavorite where Id = :id;"; 
+		$string = "Update tratodirecto_hu.Contact set UtcModifiedAt = unix_timestamp(), Favorite = :isFavorite where Id = :id;"; 
 		$sql = $db->prepare($string);
 		$sql->bindParam(':id',$activeMessagesContactId);
 		$sql->bindParam(':isFavorite',$favorite);

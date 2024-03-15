@@ -143,8 +143,8 @@ function saveMessage($message) {
             $contactId = $row[0];
             $newContactFlag = false;
         } else {
-            $string = "Insert into tratodirecto_hu.Contact (Name, Phone, UtcCreatedAt, Flag_Id) values 
-            (:contactFirstName, :contactPhone, unix_timestamp(), 1);";
+            $string = "Insert into tratodirecto_hu.Contact (Name, Phone, UtcCreatedAt, UtcModifiedAt, Flag_Id) values 
+            (:contactFirstName, :contactPhone, unix_timestamp(), unix_timestamp(), 1);";
             $sql = $db->prepare($string);
             $sql->bindParam(':contactFirstName',$firstName);
             $sql->bindParam(':contactPhone',$phone);
